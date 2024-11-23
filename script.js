@@ -9,6 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const API_KEY = "f992b5d4a4f5ca07690423dfd74bb1e8";
 
+    cityInput.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") {
+            getWeatherBtn.click();
+        }
+    });
+
     getWeatherBtn.addEventListener("click", async () => {
         const city = cityInput.value.trim();
         if (!city) {
